@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #2c3e50;
+  padding: 20px;
+  background-image: url('../photos/OCPO.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.register-btn {
+  display: inline-block;
+  margin-left: -30px;
+}
+
+.register-btn a {
+  background-color: #2196F3; 
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.register-btn a:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+
+.register-btn .icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+
+.topbar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4); 
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 5%;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.topbar .right a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.topbar .right a:hover {
+  color: #65f091;
+  text-decoration: underline;
+}
+
+html[dir="rtl"] .topbar {
+  direction: ltr;
+}
+
+html[dir="rtl"] .topbar .right {
+  margin-left: auto;
+}
+
+.topbar1 {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5%;
+  border-radius: 15px;
+  margin-bottom: 85px;
+  gap: 10px;
+  color: white; 
+}
+
+.topbar1 .date {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+}
+
+/*.topbar1 .sys {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}*/
+.sys {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  background: linear-gradient(180deg, #38eb10, #f2c94c);
+  background-size: 100% 200%; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  animation: gradientVertical 5s ease infinite, fadeInUp 1s ease forwards;
+}
+
+@keyframes gradientVertical {
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center bottom;
+  }
+  100% {
+    background-position: center top;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+
+.topbar1 .logo-ocp {
+  flex: 0 0 auto;
+  max-height: 40px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  order: 3;
+}
+
+html[dir="rtl"] .topbar1 {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .topbar1 .logo-ocp {
+  order: -1;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.titre {
+  text-align: center;
+  margin: 40px 0 30px;
+}
+
+.cadre-transparent {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #2c3e50;
+  padding: 12px 20px;
+  border-radius: 14px; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 24px;
+  font-family: roboto;
+}
+
+ .cadre-transparent:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid orange;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  margin: 50px auto 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container select,
+.form-container input[type="date"],
+.form-container button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 180px;
+  font-family: Arial, serif;
+  font-weight: bold;
+  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+input[type="date"] {
+  font-family: CollegiateFLF, serif;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.form-container button {
+  background-color: #40C783; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.form-container select:hover,
+.form-container input[type="date"]:hover {
+  border-color: #2980b9;
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.8);
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.form-container select:focus,
+.form-container input[type="date"]:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.3);
+  transform: translateY(-2px);
+}
+
+.form-container button:hover {
+  background-color: #40C783;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #40C783;
+}
+
+.form-container select:hover,
+.form-container input[type="date"]:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid orange;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.presence-list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px; 
+  box-sizing: border-box;
+}
+
+
+.presence-list h2 {
+  margin: 0 auto 45px auto;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 12px 0;
+  width: 110%;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+
+ .presence-list h2:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid orange;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.presence-list h2::before {
+  content: "📝 ";
+}
+
+.presence-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.presence-list li {
+  background-color: #69adf0;
+  margin: 12px auto;
+  padding: 13px 18px;
+  border-radius: 12px;
+  width: 100%;
+  font-weight: 400;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.presence-list li:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid orange;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.toast {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #40c783;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.toast.error {
+  background-color: #e74c3c;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+select {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+select option {
+  font-family: 'Tahoma', sans-serif;
+  color: black;
+  background-color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .presence-list li {
+    width: 100%;
+  }
+
+  .topbar1 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topbar1 .date,
+  .topbar1 .sys,
+  .topbar1 .logo-ocp {
+    flex: none;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .topbar1 .logo-ocp {
+    max-height: 50px;
+  }
+}
+
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;   
+  text-align: center;
+}
+
+.form-container {
+  justify-content: center; 
+}
+
+.presence-list {
+  width: 100%;
+}
+
+.presence-list h2 {
+  width: 100%;
+}
+
+.presence-list ul {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
